@@ -10,6 +10,9 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import static android.graphics.Paint.Style;
 
@@ -83,11 +86,16 @@ public class TresEnRaya extends View {
     public int getFichaActiva() {
         return fichaActiva;
     }
-    public void alternarFichaActiva() {
-        if(fichaActiva == FICHA_0)
+    public void alternarFichaActiva(TextView txtSeleccion) {
+
+        if(fichaActiva == FICHA_0) {
+            txtSeleccion.setText("Cruz seleccionada");
             fichaActiva = FICHA_X;
-        else
+        }
+        else {
+            txtSeleccion.setText("Circulo seleccionado");
             fichaActiva = FICHA_0;
+        }
     }
 
     public void setXColor (int color) {xColor = color;}

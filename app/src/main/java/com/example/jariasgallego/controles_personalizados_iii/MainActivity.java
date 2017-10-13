@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private TresEnRaya terTablero;
     private TextView txtCasilla;
     private Button btnBorrar;
+    private TextView txtSeleccion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +26,13 @@ public class MainActivity extends AppCompatActivity {
         btnFicha = (Button) findViewById(R.id.btnFicha);
         txtCasilla = (TextView) findViewById(R.id.txtCasilla);
         btnBorrar = (Button) findViewById(R.id.btnBorrar);
+        txtSeleccion = (TextView) findViewById(R.id.txtSeleccion);
 
         btnFicha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                terTablero.alternarFichaActiva();
+                terTablero.alternarFichaActiva(txtSeleccion);
+
             }
         });
 
