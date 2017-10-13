@@ -9,6 +9,7 @@ import android.icu.text.DisplayContext;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 
 import static android.graphics.Paint.Style;
 
@@ -60,7 +61,7 @@ public class TresEnRaya extends View {
         a.recycle();
     }
 
-    private void inicializacion() {
+    public void inicializacion() {
         tablero = new int[3][3];
         limpiar();
 
@@ -74,6 +75,7 @@ public class TresEnRaya extends View {
             for (int j = 0; j<3; j++)
                 tablero[i][j] = VACIA;
     }
+
 
     public void setFichaActiva (int ficha) {
         fichaActiva = ficha;

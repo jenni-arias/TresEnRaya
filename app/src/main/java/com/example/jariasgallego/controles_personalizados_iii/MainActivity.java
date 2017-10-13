@@ -3,11 +3,10 @@ package com.example.jariasgallego.controles_personalizados_iii;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.graphics.Canvas;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -15,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnFicha;
     private TresEnRaya terTablero;
     private TextView txtCasilla;
+    private Button btnBorrar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         terTablero = (TresEnRaya) findViewById(R.id.tablero);
         btnFicha = (Button) findViewById(R.id.btnFicha);
         txtCasilla = (TextView) findViewById(R.id.txtCasilla);
+        btnBorrar = (Button) findViewById(R.id.btnBorrar);
 
         btnFicha.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,33 +39,16 @@ public class MainActivity extends AppCompatActivity {
                 txtCasilla.setText("Última casilla seleccionada: " + fila + "." + columna);
             }
         });
+
+        btnBorrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                terTablero.limpiar();
+                terTablero.invalidate();
+            }
+        });
     }
 
-
-/*    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-*/
 }
 
 
