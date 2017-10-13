@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sgo="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horitzontal_margin"
+    android:paddingRight="@dimen/activity_horitzontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.example.jariasgallego.controles_personalizados_iii.MainActivity"
+    android:weightSum="1">
+
+    <com.example.jariasgallego.controles_personalizados_iii.TresEnRaya
+        android:id = "@+id/tablero"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        sgo:ocolor="#0000FF"
+        sgo:xcolor="#FF0000" />
+
+    <Button
+        android:id="@+id/btnFicha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cambiar Ficha" />
+
+    <TextView
+        android:id="@+id/txtCasilla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ninguna seleccionada"
+        android:layout_marginTop="10dp"/>
+
+
+</LinearLayout>
