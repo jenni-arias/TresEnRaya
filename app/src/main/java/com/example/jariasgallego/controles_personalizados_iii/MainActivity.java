@@ -11,7 +11,7 @@ import android.graphics.Canvas;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnFicha;
+  //  private Button btnFicha;
     private TresEnRaya terTablero;
     private TextView txtCasilla;
     private Button btnBorrar;
@@ -23,23 +23,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         terTablero = (TresEnRaya) findViewById(R.id.tablero);
-        btnFicha = (Button) findViewById(R.id.btnFicha);
+    //    btnFicha = (Button) findViewById(R.id.btnFicha);
         txtCasilla = (TextView) findViewById(R.id.txtCasilla);
         btnBorrar = (Button) findViewById(R.id.btnBorrar);
         txtSeleccion = (TextView) findViewById(R.id.txtSeleccion);
 
-        btnFicha.setOnClickListener(new View.OnClickListener() {
+    /*    btnFicha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 terTablero.alternarFichaActiva(txtSeleccion);
 
             }
-        });
+        });*/
 
         terTablero.setOnCasillaSeleccionadaListener(new onCasillaSeleccionadaListener() {
             @Override
             public void onCasillaSeleccionada(int fila, int columna) {
                 txtCasilla.setText("Última casilla seleccionada: " + fila + "." + columna);
+                terTablero.alternarFichaActiva(txtSeleccion);
             }
         });
 

@@ -20,11 +20,11 @@
         sgo:ocolor="#0000FF"
         sgo:xcolor="#FF0000" />
 
-    <Button
+ <!--   <Button
         android:id="@+id/btnFicha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cambiar Ficha" />
+        android:text="Cambiar Ficha" /> -->
 
     <TextView
         android:id="@+id/txtCasilla"
